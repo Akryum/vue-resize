@@ -15,21 +15,21 @@ npm install --save vue-resize
 
 # Usage
 
-```
+```javascript
 import Vue from 'vue'
 import VueResize from 'vue-resize'
 
 Vue.use(VueResize)
 ```
 
-```
+```javascript
 import Vue from 'vue'
 import { ResizeObserver } from 'vue-resize'
 
 Vue.component('resize-observer', ResizeObserver)
 ```
 
-```
+```javascript
 import 'vue-resize/dist/test.css'
 import VueResize from 'vue-resize/dist/test'
 
@@ -42,7 +42,7 @@ Listen to the `notify` event that is fired when the above DOM element is resized
 
 # Example
 
-```
+```html
 <template>
   <div class="demo">
     <h1>Hello world!</h1>

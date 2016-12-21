@@ -5,6 +5,8 @@
 
 Detect DOM element resizing
 
+[Demo](https://akryum.github.io/vue-resize/)
+
 # Installation
 
 ```

@@ -79,7 +79,7 @@ import { ResizeObserver } from 'vue-resize/src'
 Vue.component('resize-observer', ResizeObserver)
 ```
 
-**⚠️ You need to configure your bundler to compiler `.vue` files.** More info [in the official documentation](https://vuejs.org/v2/guide/single-file-components.html).
+**⚠️ You need to configure your bundler to compile `.vue` files.** More info [in the official documentation](https://vuejs.org/v2/guide/single-file-components.html).
 
 # Usage
 

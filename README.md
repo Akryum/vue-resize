@@ -63,8 +63,6 @@ Vue.component('resize-observer', VueResize.ResizeObserver)
 
 ## Source import
 
-Install all the components:
-
 ```javascript
 import Vue from 'vue'
 import VueResize from 'vue-resize/src'
@@ -72,7 +70,7 @@ import VueResize from 'vue-resize/src'
 Vue.use(VueResize)
 ```
 
-Use specific components:
+Or:
 
 ```javascript
 import Vue from 'vue'

@@ -1,7 +1,9 @@
 import Vue from 'vue'
-import Resize from '../../'
+import Resize, { install, ResizeObserver } from '../../'
 
 Vue.use(Resize)
+
+console.log(Resize, install, ResizeObserver)
 
 import App from './App.vue'
 

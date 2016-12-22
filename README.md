@@ -51,6 +51,8 @@ Vue.use(VueResize)
 <script src="vue-resize/dist/vue-resize.js"></script>
 ```
 
+The plugin should be auto-installed. If not, you can install it manually:
+
 ```javascript
 Vue.use(VueResize)
 ```

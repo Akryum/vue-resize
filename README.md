@@ -13,7 +13,7 @@ Detect DOM element resizing
 npm install --save vue-resize
 ```
 
-# Usage
+## Default import
 
 ```javascript
 import Vue from 'vue'
@@ -22,6 +22,8 @@ import VueResize from 'vue-resize'
 Vue.use(VueResize)
 ```
 
+Or:
+
 ```javascript
 import Vue from 'vue'
 import { ResizeObserver } from 'vue-resize'
@@ -29,12 +31,59 @@ import { ResizeObserver } from 'vue-resize'
 Vue.component('resize-observer', ResizeObserver)
 ```
 
+**⚠️ A css file is included when importing the package. You may have to setup your bundler to embed the css in your page.**
+
+## Distribution import
+
 ```javascript
-import 'vue-resize/dist/test.css'
-import VueResize from 'vue-resize/dist/test'
+import 'vue-resize/dist/vue-resize.css'
+import VueResize from 'vue-resize/dist/vue-resize'
 
 Vue.use(VueResize)
 ```
+
+## Browser
+
+```html
+<link rel="stylesheet" href="vue-resize/dist/vue-resize.css"/>
+
+<script src="vue.js"></script>
+<script src="vue-resize/dist/vue-resize.js"></script>
+```
+
+```javascript
+Vue.use(VueResize)
+```
+
+Or:
+
+```javascript
+Vue.component('resize-observer', VueResize.ResizeObserver)
+```
+
+## Source import
+
+Install all the components:
+
+```javascript
+import Vue from 'vue'
+import VueResize from 'vue-resize/src'
+
+Vue.use(VueResize)
+```
+
+Use specific components:
+
+```javascript
+import Vue from 'vue'
+import { ResizeObserver } from 'vue-resize/src'
+
+Vue.component('resize-observer', ResizeObserver)
+```
+
+**⚠️ You need to configure your bundler to compiler `.vue` files.** More info [in the official documentation](https://vuejs.org/v2/guide/single-file-components.html).
+
+# Usage
 
 Add the `<resize-observer>` inside a DOM element and make its position to something other than `'static'` (for example `'relative'`), so that the observer can fill it.
 

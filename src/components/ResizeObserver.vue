@@ -43,7 +43,6 @@ export default {
 
   beforeDestroy () {
     this.removeResizeHandlers()
-    this.$el
   },
 }
 </script>

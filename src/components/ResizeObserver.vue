@@ -13,6 +13,9 @@ export default {
 
     addResizeHandlers () {
       this._resizeObject.contentDocument.defaultView.addEventListener('resize', this.notify)
+      if (this._w !== this.$el.offsetWidth || this._h !== this.$el.offsetHeight) {
+        this.notify()
+      }
     },
 
     removeResizeHandlers () {
@@ -26,6 +29,10 @@ export default {
   },
 
   mounted () {
+    this.$nextTick(() => {
+      this._w = this.$el.offsetWidth
+      this._h = this.$el.offsetHeight
+    })
     const isIE = navigator.userAgent.match(/Trident/) === 'Trident'
     const object = document.createElement('object')
     this._resizeObject = object

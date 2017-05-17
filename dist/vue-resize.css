@@ -11,4 +11,5 @@
   pointer-events: none;
   display: block;
   overflow: hidden;
+  opacity: 0;
 }

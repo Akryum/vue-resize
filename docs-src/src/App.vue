@@ -1,8 +1,12 @@
 <template>
   <div id="app">
     <div class="counter">Resize: {{ count }}</div>
-    <div class="resized">
-      <textarea></textarea>
+    <div>
+      <button @click="show = !show">Toggle</button>
+      <button @click="changeSize">Change CSS size</button>
+    </div>
+    <div class="resized" v-if="show">
+      <textarea :style="{ width: `${width}px` }"></textarea>
       <resize-observer @notify="handleResize"></resize-observer>
     </div>
   </div>
@@ -15,12 +19,19 @@ export default {
   data () {
     return {
       count: 0,
+      show: true,
+      width: 300,
     }
   },
 
   methods: {
     handleResize () {
       this.count ++
+      console.log('handle')
+    },
+
+    changeSize () {
+      this.width = Math.round(Math.random() * 400) + 100
     },
   },
 }

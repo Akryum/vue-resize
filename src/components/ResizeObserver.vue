@@ -3,6 +3,10 @@
 </template>
 
 <script>
+import { getInternetExplorerVersion } from '../utils/compatibility'
+
+const isIE = getInternetExplorerVersion() !== -1
+
 export default {
   name: 'resize-observer',
 
@@ -20,8 +24,8 @@ export default {
 
     removeResizeHandlers () {
       if (this._resizeObject && this._resizeObject.onload) {
-        if (this._resizeObject.contentDocument) {
-          this._resizeObject.contentDocument.defaultView.addEventListener('resize', this.notify)
+        if (!isIE && this._resizeObject.contentDocument) {
+          this._resizeObject.contentDocument.defaultView.removeEventListener('resize', this.notify)
         }
         delete this._resizeObject.onload
       }
@@ -33,7 +37,6 @@ export default {
       this._w = this.$el.offsetWidth
       this._h = this.$el.offsetHeight
     })
-    const isIE = navigator.userAgent.match(/Trident/) === 'Trident'
     const object = document.createElement('object')
     this._resizeObject = object
     object.setAttribute('style', 'display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;')
@@ -67,5 +70,6 @@ export default {
   pointer-events: none;
   display: block;
   overflow: hidden;
+  opacity: 0;
 }
 </style>

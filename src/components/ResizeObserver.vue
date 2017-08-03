@@ -5,7 +5,14 @@
 <script>
 import { getInternetExplorerVersion } from '../utils/compatibility'
 
-const isIE = getInternetExplorerVersion() !== -1
+let isIE
+
+function initCompat () {
+  if (!initCompat.init) {
+    initCompat.init = true
+    isIE = getInternetExplorerVersion() !== -1
+  }
+}
 
 export default {
   name: 'resize-observer',
@@ -33,6 +40,7 @@ export default {
   },
 
   mounted () {
+    initCompat()
     this.$nextTick(() => {
       this._w = this.$el.offsetWidth
       this._h = this.$el.offsetHeight

@@ -1,14 +1,8 @@
 import ResizeObserver from './components/ResizeObserver.vue'
 
 // Install the components
-export function install (Vue) {
+function install (Vue) {
   Vue.component('resize-observer', ResizeObserver)
-  /* -- Add more components here -- */
-}
-
-// Expose the components
-export {
-  ResizeObserver,
   /* -- Add more components here -- */
 }
 
@@ -20,6 +14,7 @@ const plugin = {
   /* eslint-disable no-undef */
   version: VERSION,
   install,
+  ResizeObserver,
 }
 
 export default plugin

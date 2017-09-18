@@ -31,29 +31,11 @@ import { ResizeObserver } from 'vue-resize'
 Vue.component('resize-observer', ResizeObserver)
 ```
 
-**⚠️ A css file is included when importing the package. You may have to setup your bundler to embed the css in your page.**
+**⚠️ A css file is included when importing the package:**
 
-## Distribution import
-
-Install all the components:
-
-```javascript
+```js
 import 'vue-resize/dist/vue-resize.css'
-import VueResize from 'vue-resize/dist/vue-resize'
-
-Vue.use(VueResize)
 ```
-
-Use specific components:
-
-```javascript
-import 'vue-resize/dist/vue-resize.css'
-import { ResizeObserver } from 'vue-resize/dist/vue-resize'
-
-Vue.component('resize-observer', ResizeObserver)
-```
-
-**⚠️ You may have to setup your bundler to embed the css file in your page.**
 
 ## Browser
 
@@ -75,26 +57,6 @@ Or:
 ```javascript
 Vue.component('resize-observer', VueResize.ResizeObserver)
 ```
-
-## Source import
-
-```javascript
-import Vue from 'vue'
-import VueResize from 'vue-resize/src'
-
-Vue.use(VueResize)
-```
-
-Or:
-
-```javascript
-import Vue from 'vue'
-import { ResizeObserver } from 'vue-resize/src'
-
-Vue.component('resize-observer', ResizeObserver)
-```
-
-**⚠️ You need to configure your bundler to compile `.vue` files.** More info [in the official documentation](https://vuejs.org/v2/guide/single-file-components.html).
 
 # Usage
 

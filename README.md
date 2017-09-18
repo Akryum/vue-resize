@@ -43,7 +43,7 @@ import 'vue-resize/dist/vue-resize.css'
 <link rel="stylesheet" href="vue-resize/dist/vue-resize.css"/>
 
 <script src="vue.js"></script>
-<script src="vue-resize/dist/vue-resize.js"></script>
+<script src="vue-resize/dist/vue-resize.min.js"></script>
 ```
 
 The plugin should be auto-installed. If not, you can install it manually:

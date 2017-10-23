@@ -36,7 +36,7 @@
   "homepage": "https://github.com/Akryum/vue-resize#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
-    "babel-eslint": "^7.1.1",
+    "babel-eslint": "^8.0.1",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-stage-0": "^6.16.0",
     "clean-css": "^4.1.8",
@@ -48,7 +48,7 @@
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^3.0.1",
-    "npm-watch": "^0.2.0",
+    "npm-watch": "^0.3.0",
     "rollup": "^0.50.0",
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-commonjs": "^8.2.0",

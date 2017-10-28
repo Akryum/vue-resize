@@ -13,7 +13,15 @@ Detect DOM element resizing
 npm install --save vue-resize
 ```
 
-## Default import
+## Module import
+
+**⚠️ A css file is included when importing the package:**
+
+```js
+import 'vue-resize/dist/vue-resize.css'
+```
+
+Then import the package and install it into Vue:
 
 ```javascript
 import Vue from 'vue'
@@ -29,12 +37,6 @@ import Vue from 'vue'
 import { ResizeObserver } from 'vue-resize'
 
 Vue.component('resize-observer', ResizeObserver)
-```
-
-**⚠️ A css file is included when importing the package:**
-
-```js
-import 'vue-resize/dist/vue-resize.css'
 ```
 
 ## Browser

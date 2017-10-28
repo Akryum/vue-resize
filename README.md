@@ -15,7 +15,7 @@ npm install --save vue-resize
 
 ## Module import
 
-**⚠️ A css file is included when importing the package:**
+**⚠️ You need to include the package CSS:**
 
 ```js
 import 'vue-resize/dist/vue-resize.css'

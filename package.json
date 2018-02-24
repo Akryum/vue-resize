@@ -1,7 +1,7 @@
 {
   "name": "vue-resize",
   "description": "Detect DOM element resizing",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "author": {
     "name": "Guillaume Chau",
     "email": "guillaume.b.chau@gmail.com"
@@ -20,7 +20,7 @@
     "build:browser": "rollup --config build/rollup.config.browser.js",
     "build:es": "rollup --config build/rollup.config.es.js",
     "build:umd": "rollup --config build/rollup.config.umd.js",
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "dev": "cross-env NODE_ENV=development rollup --config build/rollup.config.es.js --watch"
   },
   "watch": {

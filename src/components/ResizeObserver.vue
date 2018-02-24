@@ -49,6 +49,7 @@ export default {
 		this._resizeObject = object
 		object.setAttribute('style', 'display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;')
 		object.setAttribute('aria-hidden', 'true')
+		object.setAttribute('tabindex', -1)
 		object.onload = this.addResizeHandlers
 		object.type = 'text/html'
 		if (isIE) {

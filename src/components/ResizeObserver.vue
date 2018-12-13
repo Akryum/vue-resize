@@ -18,21 +18,23 @@ export default {
 	name: 'resize-observer',
 
 	methods: {
-		notify () {
-			this.$emit('notify')
+		compareAndNotify () {
+			if (this._w !== this.$el.offsetWidth || this._h !== this.$el.offsetHeight) {
+				this._w = this.$el.offsetWidth
+				this._h = this.$el.offsetHeight
+				this.$emit('notify')
+			}
 		},
 
 		addResizeHandlers () {
-			this._resizeObject.contentDocument.defaultView.addEventListener('resize', this.notify)
-			if (this._w !== this.$el.offsetWidth || this._h !== this.$el.offsetHeight) {
-				this.notify()
-			}
+			this._resizeObject.contentDocument.defaultView.addEventListener('resize', this.compareAndNotify)
+			this.compareAndNotify()
 		},
 
 		removeResizeHandlers () {
 			if (this._resizeObject && this._resizeObject.onload) {
 				if (!isIE && this._resizeObject.contentDocument) {
-					this._resizeObject.contentDocument.defaultView.removeEventListener('resize', this.notify)
+					this._resizeObject.contentDocument.defaultView.removeEventListener('resize', this.compareAndNotify)
 				}
 				delete this._resizeObject.onload
 			}

@@ -1,8 +1,19 @@
 // https://docs.cypress.io/api/introduction/api.html
 
-describe('My First Test', () => {
-  it('Visits the app root url', () => {
+describe('Vue Resize', () => {
+  it('works', () => {
     cy.visit('/')
-    cy.contains('h1', 'Welcome to Your Vue.js App')
+    cy.contains('Resize: 0')
+    cy.get('.change').click()
+    cy.contains('Resize: 1')
+    cy.get('.change').click()
+    cy.contains('Resize: 2')
+    cy.get('.toggle').click()
+    cy.get('.change').click()
+    cy.get('.change').click()
+    cy.contains('Resize: 2')
+    cy.get('.toggle').click()
+    cy.get('.change').click()
+    cy.contains('Resize: 3')
   })
 })

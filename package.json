@@ -21,7 +21,8 @@
     "build:es": "rollup --config build/rollup.config.es.js",
     "build:umd": "rollup --config build/rollup.config.umd.js",
     "prepublishOnly": "npm run build",
-    "dev": "cross-env NODE_ENV=development rollup --config build/rollup.config.es.js --watch"
+    "dev": "cross-env NODE_ENV=development rollup --config build/rollup.config.es.js --watch",
+    "test": "cd ./docs-src && yarn run test"
   },
   "watch": {
     "build": "src/*.js"

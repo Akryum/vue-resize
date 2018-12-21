@@ -45,19 +45,21 @@ var ResizeObserver = { render: function render() {
 	name: 'resize-observer',
 
 	methods: {
-		notify: function notify() {
-			this.$emit('notify');
+		compareAndNotify: function compareAndNotify() {
+			if (this._w !== this.$el.offsetWidth || this._h !== this.$el.offsetHeight) {
+				this._w = this.$el.offsetWidth;
+				this._h = this.$el.offsetHeight;
+				this.$emit('notify');
+			}
 		},
 		addResizeHandlers: function addResizeHandlers() {
-			this._resizeObject.contentDocument.defaultView.addEventListener('resize', this.notify);
-			if (this._w !== this.$el.offsetWidth || this._h !== this.$el.offsetHeight) {
-				this.notify();
-			}
+			this._resizeObject.contentDocument.defaultView.addEventListener('resize', this.compareAndNotify);
+			this.compareAndNotify();
 		},
 		removeResizeHandlers: function removeResizeHandlers() {
 			if (this._resizeObject && this._resizeObject.onload) {
 				if (!isIE && this._resizeObject.contentDocument) {
-					this._resizeObject.contentDocument.defaultView.removeEventListener('resize', this.notify);
+					this._resizeObject.contentDocument.defaultView.removeEventListener('resize', this.compareAndNotify);
 				}
 				delete this._resizeObject.onload;
 			}
@@ -74,7 +76,6 @@ var ResizeObserver = { render: function render() {
 		});
 		var object = document.createElement('object');
 		this._resizeObject = object;
-		object.setAttribute('style', 'display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;');
 		object.setAttribute('aria-hidden', 'true');
 		object.setAttribute('tabindex', -1);
 		object.onload = this.addResizeHandlers;
@@ -95,16 +96,13 @@ var ResizeObserver = { render: function render() {
 // Install the components
 function install(Vue) {
 	Vue.component('resize-observer', ResizeObserver);
-	/* -- Add more components here -- */
+	Vue.component('ResizeObserver', ResizeObserver);
 }
-
-/* -- Plugin definition & Auto-install -- */
-/* You shouldn't have to modify the code below */
 
 // Plugin
 var plugin = {
 	// eslint-disable-next-line no-undef
-	version: "0.4.4",
+	version: "0.4.5",
 	install: install
 };
 

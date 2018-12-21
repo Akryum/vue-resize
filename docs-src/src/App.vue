@@ -2,12 +2,12 @@
   <div id="app">
     <div class="counter">Resize: {{ count }}</div>
     <div>
-      <button @click="show = !show">Toggle</button>
-      <button @click="changeSize">Change CSS size</button>
+      <button class="toggle" @click="show = !show">Toggle</button>
+      <button class="change" @click="changeSize">Change CSS size</button>
     </div>
     <div class="resized" v-if="show">
       <textarea :style="{ width: `${width}px` }"></textarea>
-      <resize-observer @notify="handleResize"></resize-observer>
+      <resize-observer @notify="handleResize"/>
     </div>
   </div>
 </template>
@@ -26,7 +26,7 @@ export default {
 
   methods: {
     handleResize () {
-      this.count ++
+      this.count++
       console.log('handle')
     },
 
@@ -37,26 +37,23 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="stylus">
+$color = #42b983
 
-.counter {
-  font-size: 42px;
-  color: #42b983;
-}
+#app
+  font-family 'Avenir', Helvetica, Arial, sans-serif
+  text-align center
+  color #2c3e50
+  margin-top 60px
 
-.resized {
-  position: relative;
-  border: solid 1px #42b983;
-  margin: 12px;
-  padding: 12px;
-  display: inline-block;
-}
+.counter
+  font-size 42px
+  color $color
+
+.resized
+  position relative
+  border solid 1px $color
+  margin 12px
+  padding @margin
+  display inline-block
 </style>

@@ -1,27 +1,37 @@
 {
   "name": "vue-resize-demo",
-  "description": "Demo for vue-resize",
   "version": "1.0.0",
-  "author": "Guillaume Chau <guillaume.b.chau@gmail.com>",
   "private": true,
+  "description": "Demo for vue-resize",
+  "author": "Guillaume Chau <guillaume.b.chau@gmail.com>",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test:e2e": "vue-cli-service test:e2e"
   },
   "dependencies": {
-    "vue": "^2.1.0"
+    "vue": "^2.5.21"
   },
   "devDependencies": {
-    "babel-core": "^6.0.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
-    "cross-env": "^5.0.5",
-    "css-loader": "^0.28.7",
-    "file-loader": "^1.1.5",
-    "style-loader": "^0.19.0",
-    "vue-loader": "^13.0.0",
-    "vue-template-compiler": "^2.1.0",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.8.2"
-  }
+    "@vue/cli-plugin-babel": "^3.2.0",
+    "@vue/cli-plugin-e2e-cypress": "^3.2.0",
+    "@vue/cli-plugin-eslint": "^3.2.1",
+    "@vue/cli-service": "^3.2.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "root": true
 }

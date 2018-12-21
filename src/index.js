@@ -3,15 +3,12 @@ import ResizeObserver from './components/ResizeObserver.vue'
 // Install the components
 export function install (Vue) {
 	Vue.component('resize-observer', ResizeObserver)
-	/* -- Add more components here -- */
+	Vue.component('ResizeObserver', ResizeObserver)
 }
 
 export {
 	ResizeObserver,
 }
-
-/* -- Plugin definition & Auto-install -- */
-/* You shouldn't have to modify the code below */
 
 // Plugin
 const plugin = {

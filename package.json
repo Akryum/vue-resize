@@ -16,11 +16,11 @@
   "module": "dist/vue-resize.esm.js",
   "unpkg": "dist/vue-resize.min.js",
   "scripts": {
-    "build": "npm run build:browser && npm run build:es && npm run build:umd",
+    "build": "yarn run build:browser && yarn run build:es && yarn run build:umd",
     "build:browser": "rollup --config build/rollup.config.browser.js",
     "build:es": "rollup --config build/rollup.config.es.js",
     "build:umd": "rollup --config build/rollup.config.umd.js",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "yarn run test && yarn run build",
     "dev": "cross-env NODE_ENV=development rollup --config build/rollup.config.es.js --watch",
     "test": "cd ./docs-src && yarn run test"
   },

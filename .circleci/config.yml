@@ -20,9 +20,9 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "yarn.lock" }}-{{ checksum "docs-src/yarn.lock" }}
+          - v2-dependencies-{{ checksum "yarn.lock" }}-{{ checksum "docs-src/yarn.lock" }}
           # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+          - v2-dependencies-
 
       - run: yarn install && cd docs-src && yarn install
 
@@ -30,7 +30,8 @@ jobs:
           paths:
             - node_modules
             - docs-src/node_modules
-          key: v1-dependencies-{{ checksum "yarn.lock" }}-{{ checksum "docs-src/yarn.lock" }}
+            - ~/.cache
+          key: v2-dependencies-{{ checksum "yarn.lock" }}-{{ checksum "docs-src/yarn.lock" }}
         
       # run tests!
       - run: yarn test

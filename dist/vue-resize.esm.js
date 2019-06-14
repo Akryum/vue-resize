@@ -35,7 +35,7 @@ function initCompat() {
 
 var ResizeObserver = { render: function render() {
 		var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "resize-observer", attrs: { "tabindex": "-1" } });
-	}, staticRenderFns: [], _scopeId: 'data-v-b329ee4c',
+	}, staticRenderFns: [], _scopeId: 'data-v-288f3a8c',
 	name: 'resize-observer',
 
 	methods: {
@@ -43,7 +43,7 @@ var ResizeObserver = { render: function render() {
 			if (this._w !== this.$el.offsetWidth || this._h !== this.$el.offsetHeight) {
 				this._w = this.$el.offsetWidth;
 				this._h = this.$el.offsetHeight;
-				this.$emit('notify');
+				this.$emit('notify', { width: this._w, height: this._h });
 			}
 		},
 		addResizeHandlers: function addResizeHandlers() {

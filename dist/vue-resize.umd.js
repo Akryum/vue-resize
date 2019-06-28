@@ -73,6 +73,7 @@ var ResizeObserver = { render: function render() {
 		this.$nextTick(function () {
 			_this._w = _this.$el.offsetWidth;
 			_this._h = _this.$el.offsetHeight;
+			_this.$emit('init', { width: _this._w, height: _this._h });
 		});
 		var object = document.createElement('object');
 		this._resizeObject = object;

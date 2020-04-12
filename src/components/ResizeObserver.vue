@@ -36,7 +36,9 @@ export default {
 				if (!isIE && this._resizeObject.contentDocument) {
 					this._resizeObject.contentDocument.defaultView.removeEventListener('resize', this.compareAndNotify)
 				}
-				delete this._resizeObject.onload
+				this.$el.removeChild(this._resizeObject)
+				this._resizeObject.onload = null
+				this._resizeObject = null
 			}
 		},
 	},

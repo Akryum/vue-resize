@@ -1,15 +1,16 @@
 import base from './rollup.config.base'
-import uglify from 'rollup-plugin-uglify'
-import { minify } from 'uglify-es'
+import { terser } from 'rollup-plugin-terser'
 
 const config = Object.assign({}, base, {
-	output: {
-		file: 'dist/vue-resize.min.js',
-		format: 'iife',
-	},
-	name: 'VueResize',
+  output: {
+    exports: 'named',
+    name: 'VueResize',
+    file: 'dist/vue-resize.min.js',
+    format: 'iife',
+    sourcemap: true,
+  },
 })
 
-config.plugins.push(uglify({}, minify))
+config.plugins.push(terser({}))
 
 export default config

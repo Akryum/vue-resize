@@ -1,14 +1,18 @@
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
   parserOptions: {
+    parser: 'babel-eslint',
+    ecmaVersion: 2017,
     sourceType: 'module'
   },
   // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
-  extends: 'standard',
+  extends: [
+    'standard',
+    'plugin:vue/recommended',
+  ],
   // required to lint *.vue files
   plugins: [
-    'html'
+    'vue',
   ],
   env: {
     browser: true,
@@ -23,7 +27,5 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     // trailing comma
     'comma-dangle': ['error', 'always-multiline'],
-    'indent': ['error', 'tab'],
-    'no-tabs': 'off',
   }
 }

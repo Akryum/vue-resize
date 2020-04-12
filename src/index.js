@@ -2,19 +2,19 @@ import ResizeObserver from './components/ResizeObserver.vue'
 
 // Install the components
 export function install (Vue) {
-	Vue.component('resize-observer', ResizeObserver)
-	Vue.component('ResizeObserver', ResizeObserver)
+  Vue.component('resize-observer', ResizeObserver)
+  Vue.component('ResizeObserver', ResizeObserver)
 }
 
 export {
-	ResizeObserver,
+  ResizeObserver,
 }
 
 // Plugin
 const plugin = {
-	// eslint-disable-next-line no-undef
-	version: VERSION,
-	install,
+  // eslint-disable-next-line no-undef
+  version: VERSION,
+  install,
 }
 
 export default plugin
@@ -22,10 +22,10 @@ export default plugin
 // Auto-install
 let GlobalVue = null
 if (typeof window !== 'undefined') {
-	GlobalVue = window.Vue
+  GlobalVue = window.Vue
 } else if (typeof global !== 'undefined') {
-	GlobalVue = global.Vue
+  GlobalVue = global.Vue
 }
 if (GlobalVue) {
-	GlobalVue.use(plugin)
+  GlobalVue.use(plugin)
 }

@@ -2,11 +2,17 @@
   <div id="app">
     <div class="counter">Resize: {{ count }}</div>
     <div>
-      <button class="toggle" @click="show = !show">Toggle</button>
-      <button class="change" @click="changeSize">Change CSS size</button>
+      <button
+        class="toggle"
+        @click="show = !show">Toggle</button>
+      <button
+        class="change"
+        @click="changeSize">Change CSS size</button>
     </div>
-    <div class="resized" v-if="show">
-      <textarea :style="{ width: `${width}px` }"></textarea>
+    <div
+      v-if="show"
+      class="resized">
+      <textarea :style="{ width: `${width}px` }"/>
       <resize-observer @notify="handleResize"/>
     </div>
   </div>
@@ -14,7 +20,7 @@
 
 <script>
 export default {
-  name: 'app',
+  name: 'App',
 
   data () {
     return {

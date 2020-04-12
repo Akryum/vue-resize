@@ -121,8 +121,8 @@ Listen to the `notify` event that is fired when the above DOM element is resized
 <script>
 export default {
   methods: {
-    handleResize () {
-      console.log('resized')
+    handleResize ({ width, height }) {
+      console.log('resized', width, height)
     }
   }
 }

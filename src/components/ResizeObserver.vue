@@ -22,7 +22,10 @@ export default {
 			if (this._w !== this.$el.offsetWidth || this._h !== this.$el.offsetHeight) {
 				this._w = this.$el.offsetWidth
 				this._h = this.$el.offsetHeight
-				this.$emit('notify')
+				this.$emit('notify', {
+					width: this._w,
+					height: this._h,
+				})
 			}
 		},
 

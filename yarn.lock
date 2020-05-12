@@ -818,7 +818,7 @@
   dependencies:
     "@types/node" "*"
 
-"@vue/component-compiler-utils@^3.0.0":
+"@vue/component-compiler-utils@^3.0.0", "@vue/component-compiler-utils@^3.1.2":
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/@vue/component-compiler-utils/-/component-compiler-utils-3.1.2.tgz#8213a5ff3202f9f2137fe55370f9e8b9656081c3"
   integrity sha512-QLq9z8m79mCinpaEeSURhnNCN6djxpHw0lpP/bodMlt5kALfONpryMthvnrQOlTcIKoF+VoPi+lPHUYeDFPXug==
@@ -834,10 +834,10 @@
   optionalDependencies:
     prettier "^1.18.2"
 
-"@vue/component-compiler@^4.1.0":
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@vue/component-compiler/-/component-compiler-4.2.0.tgz#437855cd59f3d713a4eef81bac7ab0f4950977b4"
-  integrity sha512-bxFNxUpKzLfHDoGTsAe2w7gEz4OwII7tp5m7sAXES1DApbpYglH4YSpYxdZRZ4GN/wj2fPD0u72QRJXd4UPvFQ==
+"@vue/component-compiler@^4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@vue/component-compiler/-/component-compiler-4.2.1.tgz#7708915f0e336726e4deea85ae7a0321c80fb680"
+  integrity sha512-HcvvAOuiwdVlPr94ocsn7AynSv6LAX9VctCgkeRzm+jy0N8GC9rEzGLCQgIRahk+IOoj9DwijGc+JC8/czvhkQ==
   dependencies:
     "@vue/component-compiler-utils" "^3.0.0"
     clean-css "^4.1.11"
@@ -2492,7 +2492,7 @@ lru-cache@^4.1.2:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-magic-string@^0.25.2, magic-string@^0.25.5:
+magic-string@^0.25.2, magic-string@^0.25.5, magic-string@^0.25.7:
   version "0.25.7"
   resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.25.7.tgz#3f497d6fd34c669c6798dcb821f2ef31f5445051"
   integrity sha512-4CrMT5DOHTDk4HYDlzmwu4FVCcIYI8gauveasrdCu2IKIFOJ3f0v/8MDGJCDL9oD2ppz/Av1b0Nj345H9M+XIA==
@@ -3234,15 +3234,15 @@ rollup-plugin-terser@^5.3.0:
     terser "^4.6.2"
 
 rollup-plugin-vue@^5.1.6:
-  version "5.1.6"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-vue/-/rollup-plugin-vue-5.1.6.tgz#c0b31de919ff1aad36f3277957ac90345e897c23"
-  integrity sha512-O8AmNCecKGn8k28UCIBQ6fD4j2UAxeTwjmajR32IxtL2sBBUcJ0vAIwBTGZn75ijmXOoxngYgssJceY3kV/MVA==
+  version "5.1.7"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-vue/-/rollup-plugin-vue-5.1.7.tgz#1093c105de1edffa20030cc87abc805b0af88285"
+  integrity sha512-6/in3vg23ZcGxn9AoxUoFINOC+gR4ufL0UQlHtOaDRD4k6ebqnHM5JMROu3RQROYZ8OyaxlRoUf4n2HlgaQb5w==
   dependencies:
-    "@vue/component-compiler" "^4.1.0"
-    "@vue/component-compiler-utils" "^3.0.0"
+    "@vue/component-compiler" "^4.2.1"
+    "@vue/component-compiler-utils" "^3.1.2"
     debug "^4.1.1"
     hash-sum "^1.0.2"
-    magic-string "^0.25.2"
+    magic-string "^0.25.7"
     querystring "^0.2.0"
     rollup-pluginutils "^2.4.1"
     source-map "0.7.3"

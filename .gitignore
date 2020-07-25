@@ -1,2 +1,2 @@
 node_modules/
-dist/
+#dist/ #adding intermidiary builds, uncomment before PR

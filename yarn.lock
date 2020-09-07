@@ -1618,9 +1618,9 @@ eslint-plugin-es@^3.0.0:
     regexpp "^3.0.0"
 
 eslint-plugin-html@^6.0.0:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-html/-/eslint-plugin-html-6.0.1.tgz#4134b05d20b3ac2da7ac1b2ea1881e994ff42250"
-  integrity sha512-D0Cw9ef6840MAmRj8Hxb3j1BMYP6myN39VqHetznsqDyoNoseoBKAGQKKlMtCLuM4L3WVGQMjAry+1HkMjVHgQ==
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-html/-/eslint-plugin-html-6.1.0.tgz#0e0d4845d4b3eb6e199652385e272f7b722673db"
+  integrity sha512-xcqithhnjUxoEDRL0hYci4RSS8EZ1NGr3/H8x3BxJvxgbu4R3YaEUea9i93j95NuAgoAbOUfNmybta8fqi4UbA==
   dependencies:
     htmlparser2 "^4.1.0"
 

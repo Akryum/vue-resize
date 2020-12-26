@@ -21,6 +21,10 @@ function initCompat () {
 export default {
   name: 'ResizeObserver',
 
+  emits: [
+    'notify',
+  ],
+
   mounted () {
     initCompat()
     nextTick(() => {

@@ -20,11 +20,21 @@ function initCompat () {
 export default {
   name: 'ResizeObserver',
 
+  props: {
+    emitOnMount: {
+      type: Boolean,
+      default: false,
+    },
+  },
+
   mounted () {
     initCompat()
     this.$nextTick(() => {
       this._w = this.$el.offsetWidth
       this._h = this.$el.offsetHeight
+      if (this.emitOnMount) {
+        this.emitSize()
+      }
     })
     const object = document.createElement('object')
     this._resizeObject = object
@@ -50,11 +60,15 @@ export default {
       if (this._w !== this.$el.offsetWidth || this._h !== this.$el.offsetHeight) {
         this._w = this.$el.offsetWidth
         this._h = this.$el.offsetHeight
-        this.$emit('notify', {
-          width: this._w,
-          height: this._h,
-        })
+        this.emitSize()
       }
+    },
+
+    emitSize () {
+      this.$emit('notify', {
+        width: this._w,
+        height: this._h,
+      })
     },
 
     addResizeHandlers () {

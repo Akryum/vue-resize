@@ -5,7 +5,7 @@
 
 Detect DOM element resizing
 
-[Demo](https://akryum.github.io/vue-resize/) - [JSFiddle](https://jsfiddle.net/Akryum/zqygwf3r/)
+[JSFiddle](https://jsfiddle.net/Akryum/zqygwf3r/)
 
 <p>
   <a href="https://www.patreon.com/akryum" target="_blank">

@@ -43,7 +43,7 @@ export default {
   watch: {
     include: 'src/**',
   },
-	external: [
-		'vue',
-	],
+  external: [
+    'vue',
+  ],
 }

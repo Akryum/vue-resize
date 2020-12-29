@@ -8,6 +8,9 @@ const config = Object.assign({}, base, {
     file: 'dist/vue-resize.min.js',
     format: 'iife',
     sourcemap: true,
+		globals: {
+			vue: 'Vue',
+		},
   },
 })
 

@@ -36,19 +36,17 @@ import 'vue-resize/dist/vue-resize.css'
 Then import the package and install it into Vue:
 
 ```javascript
-import Vue from 'vue'
 import VueResize from 'vue-resize'
 
-Vue.use(VueResize)
+app.use(VueResize)
 ```
 
 Or:
 
 ```javascript
-import Vue from 'vue'
 import { ResizeObserver } from 'vue-resize'
 
-Vue.component('resize-observer', ResizeObserver)
+app.component('resize-observer', ResizeObserver)
 ```
 
 ## Browser
@@ -60,16 +58,14 @@ Vue.component('resize-observer', ResizeObserver)
 <script src="vue-resize/dist/vue-resize.min.js"></script>
 ```
 
-The plugin should be auto-installed. If not, you can install it manually:
-
 ```javascript
-Vue.use(VueResize)
+app.use(VueResize)
 ```
 
 Or:
 
 ```javascript
-Vue.component('resize-observer', VueResize.ResizeObserver)
+app.component('resize-observer', VueResize.ResizeObserver)
 ```
 
 # Usage

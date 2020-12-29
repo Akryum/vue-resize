@@ -1,14 +1,14 @@
 import 'vue-resize/dist/vue-resize.css'
-import Vue from 'vue'
+import { createApp, h } from 'vue'
 import Resize, { install, ResizeObserver } from 'vue-resize'
 import App from './App.vue'
 
-Vue.use(Resize)
+const app = createApp({
+  render: () => h(App),
+})
+
+app.use(Resize)
 
 console.log(Resize, install, ResizeObserver)
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  render: h => h(App),
-})
+app.mount('#app')

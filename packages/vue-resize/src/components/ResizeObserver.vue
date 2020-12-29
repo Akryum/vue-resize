@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import { nextTick } from 'vue'
 import { getInternetExplorerVersion } from '../utils/compatibility'
 
 let isIE
@@ -37,9 +38,13 @@ export default {
     },
   },
 
+  emits: [
+    'notify',
+  ],
+
   mounted () {
     initCompat()
-    this.$nextTick(() => {
+    nextTick(() => {
       this._w = this.$el.offsetWidth
       this._h = this.$el.offsetHeight
       if (this.emitOnMount) {
@@ -61,7 +66,7 @@ export default {
     }
   },
 
-  beforeDestroy () {
+  beforeUnmount () {
     this.removeResizeHandlers()
   },
 
@@ -116,7 +121,7 @@ export default {
   opacity: 0;
 }
 
-.resize-observer >>> object {
+.resize-observer:deep(object) {
   display: block;
   position: absolute;
   top: 0;

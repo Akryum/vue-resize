@@ -30,7 +30,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Akryum/vue-resize.git"
+    "url": "git+https://github.com/Akryum/vue-resize.git",
+    "directory": "packages/vue-resize"
   },
   "bugs": {
     "url": "https://github.com/Akryum/vue-resize/issues"

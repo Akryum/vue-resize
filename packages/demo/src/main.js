@@ -1,6 +1,6 @@
-import '../../dist/vue-resize.css'
+import 'vue-resize/dist/vue-resize.css'
 import Vue from 'vue'
-import Resize, { install, ResizeObserver } from '../../'
+import Resize, { install, ResizeObserver } from 'vue-resize'
 import App from './App.vue'
 
 Vue.use(Resize)

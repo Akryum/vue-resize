@@ -1,9 +1,0 @@
-version: 2.1
-orbs:
-  cypress: cypress-io/cypress@1
-workflows:
-  build:
-    jobs:
-      - cypress/run:
-          install-command: yarn install --frozen-lockfile && cd docs-src && yarn install --frozen-lockfile
-          command: yarn test

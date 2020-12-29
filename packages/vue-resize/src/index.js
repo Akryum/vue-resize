@@ -1,10 +1,10 @@
 import ResizeObserver from './components/ResizeObserver.vue'
 
 // Install the components
-export function install (Vue) {
+export function install (app) {
   // eslint-disable-next-line vue/component-definition-name-casing
-  Vue.component('resize-observer', ResizeObserver)
-  Vue.component('ResizeObserver', ResizeObserver)
+  app.component('resize-observer', ResizeObserver)
+  app.component('ResizeObserver', ResizeObserver)
 }
 
 export {

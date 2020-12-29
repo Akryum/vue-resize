@@ -18,7 +18,7 @@ jobs:
       id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
       with:
         path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}-v2
         restore-keys: |
           ${{ runner.os }}-yarn-
     
@@ -28,13 +28,13 @@ jobs:
         path: |
           node_modules
           **/node_modules
-        key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+        key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}-v2
     
     - name: Cypress cache
       uses: actions/cache@v1
       with:
         path: /home/runner/.cache/Cypress
-        key: ${{ runner.os }}-Cypress-v1
+        key: ${{ runner.os }}-Cypress-v2
     
     - name: Install
       run: yarn --frozen-lockfile

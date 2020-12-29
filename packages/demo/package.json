@@ -12,18 +12,19 @@
     "test": "vue-cli-service test:e2e --headless"
   },
   "dependencies": {
-    "vue": "^2.5.21",
+    "vue": "^2.6.12",
     "vue-resize": "^1.0.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.2.0",
-    "@vue/cli-plugin-e2e-cypress": "^3.2.0",
-    "@vue/cli-plugin-eslint": "^3.2.1",
-    "@vue/cli-service": "^3.2.0",
-    "@vue/eslint-config-standard": "^4.0.0",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2",
-    "vue-template-compiler": "^2.5.21"
+    "@vue/cli-plugin-babel": "^4.5.9",
+    "@vue/cli-plugin-e2e-cypress": "^4.5.9",
+    "@vue/cli-plugin-eslint": "^4.5.9",
+    "@vue/cli-service": "^4.5.9",
+    "@vue/eslint-config-standard": "^6.0.0",
+    "eslint": "^7.16.0",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^3",
+    "vue-template-compiler": "^2.6.12"
   },
   "postcss": {
     "plugins": {

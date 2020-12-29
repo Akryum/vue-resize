@@ -22,7 +22,8 @@
     "build:umd": "rollup --config build/rollup.config.umd.js",
     "prepublishOnly": "yarn run test",
     "dev": "cross-env NODE_ENV=development rollup --config build/rollup.config.es.js --watch",
-    "test": "yarn run build && cd ../demo && yarn run test"
+    "test": "yarn run build && yarn run lint && cd ../demo && yarn run test",
+    "lint": "eslint --ext .js,.vue src"
   },
   "watch": {
     "build": "src/*.js"

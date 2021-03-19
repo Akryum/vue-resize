@@ -37,8 +37,12 @@
     "url": "https://github.com/Akryum/vue-resize/issues"
   },
   "homepage": "https://github.com/Akryum/vue-resize#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.13.10"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.13.10",
     "@babel/preset-env": "^7.9.0",
     "@rollup/plugin-babel": "^5.2.2",
     "@rollup/plugin-commonjs": "^11.0.2",

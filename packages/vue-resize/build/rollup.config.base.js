@@ -34,10 +34,12 @@ export default {
     }),
     babel({
       exclude: 'node_modules/**',
+      babelHelpers: 'runtime',
     }),
     cjs(),
     replace({
       VERSION: JSON.stringify(config.version),
+      preventAssignment: false,
     }),
   ],
   watch: {

@@ -10,6 +10,7 @@ const config = Object.assign({}, base, {
   external: [
     ...base.external,
     // Additional externals here
+    /@babel\/runtime/,
   ],
 })
 

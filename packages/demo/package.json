@@ -23,7 +23,7 @@
     "@vue/eslint-config-standard": "^6.0.0",
     "eslint": "^7.16.0",
     "stylus": "^0.54.8",
-    "stylus-loader": "^3",
+    "stylus-loader": "^5",
     "vue-template-compiler": "^2.6.12"
   },
   "postcss": {

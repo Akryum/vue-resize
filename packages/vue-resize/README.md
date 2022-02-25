@@ -7,15 +7,15 @@ Detect DOM element resizing
 
 [JSFiddle](https://jsfiddle.net/Akryum/zqygwf3r/)
 
-<p>
-  <a href="https://www.patreon.com/akryum" target="_blank">
-    <img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" alt="Become a Patreon">
-  </a>
-</p>
+[Become a sponsor](https://github.com/sponsors/Akryum/)
 
 ## Sponsors
 
-[![sponsors logos](https://guillaume-chau.info/sponsors.png)](https://guillaume-chau.info/sponsors)
+<p align="center">
+  <a href="https://guillaume-chau.info/sponsors/" target="_blank">
+    <img src='https://akryum.netlify.app/sponsors.svg'/>
+  </a>
+</p>
 
 <br>
 

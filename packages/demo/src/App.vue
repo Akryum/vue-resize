@@ -43,23 +43,24 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-$color = #42b983
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 
-#app
-  font-family 'Avenir', Helvetica, Arial, sans-serif
-  text-align center
-  color #2c3e50
-  margin-top 60px
+.counter {
+  font-size: 42px;
+  color: #42b983;
+}
 
-.counter
-  font-size 42px
-  color $color
-
-.resized
-  position relative
-  border solid 1px $color
-  margin 12px
-  padding @margin
-  display inline-block
+.resized {
+  position: relative;
+  border: solid 1px #42b983;
+  margin: 12px;
+  padding: 12px;
+  display: inline-block;
+}
 </style>

@@ -1,6 +1,6 @@
 {
   "name": "vue-resize-demo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Demo for vue-resize",
   "author": "Guillaume Chau <guillaume.b.chau@gmail.com>",
@@ -22,8 +22,6 @@
     "@vue/cli-service": "^4.5.9",
     "@vue/eslint-config-standard": "^6.0.0",
     "eslint": "^7.16.0",
-    "stylus": "^0.54.8",
-    "stylus-loader": "^3",
     "vue-template-compiler": "^2.6.12"
   },
   "postcss": {
